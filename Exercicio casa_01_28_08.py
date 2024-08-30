@@ -13,18 +13,28 @@ import time
 
 os.system("cls||clear")
 
+contador=0
 nota1=0
-mult=10
+MULT=3
+ultrapassou_limite = False
 
-for a in range(mult):
+for a in range(MULT):
     while True:
         nota=float(input(f"Informe a {a+1}º nota: "))
+        contador = 1 + contador
         if nota<0 or nota>10:
             print("Informe sua nota novamente: ")
+            if contador == 3:
+                print("Muitas tentativas erradas.")
+                ultrapassou_limite = True
+                break
         else:
             break
+    if ultrapassou_limite:
+        break
+    
     nota1 = nota+nota1
-media = nota1/mult
+media = nota1/MULT
 if media >= 7:
     print("Parabéns, você foi aprovado...")
     time.sleep(1)
