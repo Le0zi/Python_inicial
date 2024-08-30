@@ -1,10 +1,20 @@
+"""Escreva um algoritimo que leia três  notas de um aluno.
+Caso seja menor que - ou maior que 10, mostre a pergunta novamente
+
+Após receber as notas dentro dos parâmetros acima, calcule a media verifique se o aluno está  
+aprovado, recuperação ou reprovado considerando os seguintes criterios
+
+Se media for a partir de 7, aprovado;
+Se media for entre 5 e 6.9, o aluno está em recuperação;
+Caso seja menor que 5, o aluno está reprovado."""
+
 import os 
 import time
 
 os.system("cls||clear")
 
 nota1=0
-mult=4
+mult=10
 
 for a in range(mult):
     while True:
