@@ -6,7 +6,7 @@ aprovado, recuperação ou reprovado considerando os seguintes criterios
 
 Se media for a partir de 7, aprovado;
 Se media for entre 5 e 6.9, o aluno está em recuperação;
-Caso seja menor que 5, o aluno está reprovado."""
+Caso seja menor que 5r, o aluno está reprovado."""
 
 import os 
 import time
