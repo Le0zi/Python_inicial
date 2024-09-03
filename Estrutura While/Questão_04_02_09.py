@@ -6,20 +6,22 @@ import time
 
 os.system("cls||clear")
 
-gasto=0
+soma=0
+limite_gast=float(input("Informe qual limite desejado: "))
 
 while True:
-    max_gs=float(input("Informe o valor maximo de orçamento: "))
-    print("""Deseja informar algum gasto ?\n
-          1- SIM
-          2-NÃO
-          """)
-    opcao=input("?").upper()
-
-    match (opcao):
-        case "1"| "SIM":
-            while True:
-                valor=float(input("Insira o valor: "))
-                gasto += valor
-        case "2"|"NAO":
-            break
+    while True:
+        gasto_diario=float(input("informe o valor do gasto: "))
+        soma = gasto_diario + soma
+        if soma == 0:
+            print("saindo...")        
+        elif soma>limite_gast:
+            print("informe outro valor: ")
+    opcao=int(input("""Desja inserir outro gasto ?\n1- SIM \n2-NÂO\n:"""))
+    if soma > limite_gast:
+        print("====Valor excedido====")
+        break
+    elif opcao == 2:
+        print("===FIM===")
+        break
+    
