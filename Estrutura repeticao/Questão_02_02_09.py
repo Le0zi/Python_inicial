@@ -7,7 +7,7 @@ os.system ("cls||clear")
 
 soma=0
 
-for i in range(1,5):
+for i in range(soma,5):
     soma = i + soma
     print(soma)
     time.sleep(1)
