@@ -14,14 +14,15 @@ while True:
         gasto_diario=float(input("informe o valor do gasto: "))
         soma = gasto_diario + soma
         if soma == 0:
+            time.sleep(1)
             print("saindo...")        
-        elif soma>limite_gast:
+        elif soma<limite_gast:
             print("informe outro valor: ")
-    opcao=int(input("""Desja inserir outro gasto ?\n1- SIM \n2-NÂO\n:"""))
-    if soma > limite_gast:
-        print("====Valor excedido====")
-        break
-    elif opcao == 2:
-        print("===FIM===")
-        break
+            opcao=int(input("""Desja inserir outro gasto ?\n1- SIM \n2-NÂO\n:"""))
+            if soma > limite_gast:
+                print("====Valor excedido====")
+                break
+            elif opcao == 2:
+                print("===FIM===")
+                break
     

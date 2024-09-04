@@ -5,7 +5,7 @@ import os
 import time
 
 os.system("cls||clear")
-
+n
 while True:
     num=int(input(f"Informe um numero: "))
     for i in range(num, 50,-1):
