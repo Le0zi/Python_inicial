@@ -4,7 +4,6 @@ os.system("cls||clear")
 verificação=True
 login:str
 senha:str
-contador =0
 def logo_senai():
     print("""
 ===============
@@ -19,17 +18,21 @@ def carregamento():
     for i in range(1,1001):
         print(f"{i*0.1:.1f}%")
         time.sleep(0.001)
-def logando():
+def logando(login, senha):
     logo_senai()
     while True:
+        contador =0
         login1=input("Informe seu usuario: ")
         if login1==login:
             carregamento()
+            os.system("cls||clear")
             senha1=input("Informe sua senha: ")
             if senha1 == senha:
                 carregamento()
                 time.sleep(1)
+                os.system("cls||clear")
                 print("Login efetuado")
+                break
             else:
                 contador +=1
                 print("Login ou senha Incorretos, informe novamente")
@@ -40,11 +43,12 @@ def logando():
             print("Dados incorretos, informe novamente.")
             if contador ==3:
                 break
-def dados_salvos():
+def dados_salvos1():
     login = 'Leonardo'
-    senha = '2001'
-    resultado =(login)
-    return senha, login
+    return login
+def dados_salvos():
+    senha= '12345'
+    return senha
 while True:
     logo_senai()
     opcao=int(input("""=========== Seja bem vindo:  ===========  
@@ -52,8 +56,6 @@ while True:
             2- Efetuar Login
             3-Sair do sistema
     Informe a opção desejada: """))
-    carregamento()
-    print("Carregamento efetuado sucesso.")
     time.sleep(1)
     os.system("cls||clear")
     match (opcao):
@@ -75,4 +77,16 @@ while True:
                         break
         case 2:
             dados_salvos()
-            logando()
+            login=dados_salvos1()
+            senha=dados_salvos()
+            logando(login, senha)
+        case 3:
+            logo_senai()
+            carregamento()
+            os.system("cls||clear")
+            logo_senai()
+            print("Operação concluida")
+            os.system("cls||clear")
+        case _:
+            pass
+            break
