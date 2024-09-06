@@ -43,6 +43,7 @@ def logando():
 def dados_salvos():
     login = 'Leonardo'
     senha = '2001'
+    resultado =(login)
     return senha, login
 while True:
     logo_senai()
