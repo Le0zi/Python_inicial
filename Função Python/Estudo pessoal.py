@@ -19,6 +19,7 @@ def carregamento():
         print(f"{i*0.1:.1f}%")
         time.sleep(0.001)
 def logando(login, senha):
+    contador=0
     logo_senai()
     while True:
         contador =0
