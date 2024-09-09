@@ -80,6 +80,7 @@ while True:
             login=dados_salvos1()
             senha=dados_salvos()
             logando(login, senha)
+            break
         case 3:
             logo_senai()
             carregamento()
