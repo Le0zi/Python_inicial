@@ -13,16 +13,23 @@ def IMC (peso:float,altura:float):
         imc=peso/(altura*altura)
         if imc<18.5:
             print("Abaixo do peso:\nConsulte um nutricionista para orientação.")
+            break
         elif imc<=24.9:
             print("Peso normal:\nMantenha habitos saudáveis.")
+            break
         elif imc<=29.9:
             print("Sobrepeso:\nConsidere uma dieta e atividade fisica.")
+            break
         elif imc <=34.9:
             print("Obesidade Grau I:\nProcure orientação de um profissional.")
+            break
         elif imc<=39.9:
             print("Obesidade Grau II:\nConsulte um medico para avaliação e orientação.")
+            break
         else:
             print("Obesidade Grau III:\nBusque assistência media imediatamente")  
+            break
+        
 def opera(opcao:int,num1:float, num2:float):
     match (opcao):
         case 1: 
