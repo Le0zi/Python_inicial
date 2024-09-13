@@ -31,6 +31,7 @@ for i, nota in enumerate(list_notas):
     soma+=nota
     media_ari=soma/QTD
 
+
 #Saida de dados:
 
 resultado =aprovação(media_ari)
