@@ -8,9 +8,17 @@ import os
 import time
 
 os.system("cls||clear")
-QTD=3
+QTD=10
 num:int
 
+def logo_senai(): #Criação da função
+    os.system("cls||clear")#Conteudo da função
+    print("""
+          ==============
+          --   SENAI  --
+          ==============
+          """)
+    
 #Entrada:
 def entrada ():
     list_num=[]
@@ -26,11 +34,14 @@ def entrada ():
     return list_num
 
 #Atribuição:
+
+logo_senai()
 list = entrada()
 
 #Resultado:
 total=len(list)
-print("\nAAAAAAAA")
+logo_senai()
+print("\n=== Resultado ===")
 for i,numero in enumerate(reversed(list), start=1):
     print(f"{total-i+1}º numero: {numero}")    
 
